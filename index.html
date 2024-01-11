@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binary Genesis - Explore the Cosmic Code</title>
+    <title>Binary Genesis - Game Overview</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,8 +14,8 @@
         }
 
         header {
-            background-color: rgba(255, 223, 102, 0.1);
-            color: #b8860b;
+            background-color: rgba(128, 64, 0, 0.5); /* Darker orange background */
+            color: #FF8C00; /* Dark orange text */
             text-align: center;
             padding: 20px;
             position: relative;
@@ -25,11 +25,13 @@
         header h1 {
             margin: 0;
             font-size: 36px;
+            font-weight: bold;
         }
 
         header p {
             margin-top: 10px;
             font-size: 18px;
+            font-weight: bold;
         }
 
         canvas {
@@ -40,30 +42,32 @@
         }
 
         .section {
-            background-color: rgba(255, 223, 102, 0.1);
+            background-color: rgba(128, 64, 0, 0.5); /* Darker orange background */
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin: 20px;
             padding: 30px;
-            color: #b8860b;
+            color: #FF8C00; /* Dark orange text */
             position: relative;
             z-index: 1; /* Ensure the content is above the canvas */
         }
 
         h2 {
-            color: #b8860b;
+            color: #FF8C00; /* Dark orange text */
             font-size: 28px;
             margin-bottom: 20px;
+            font-weight: bold;
         }
 
         p {
-            color: #ffd700;
+            color: #FF8C00; /* Dark orange text */
             font-size: 16px;
             line-height: 1.6;
+            font-weight: bold;
         }
 
         a {
-            color: #ffd700;
+            color: #FF8C00; /* Dark orange text */
             text-decoration: none;
             font-weight: bold;
         }
@@ -73,8 +77,8 @@
         }
 
         footer {
-            background-color: rgba(255, 223, 102, 0.1);
-            color: #ffd700;
+            background-color: rgba(128, 64, 0, 0.5); /* Darker orange background */
+            color: #FF8C00; /* Dark orange text */
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -86,6 +90,7 @@
         footer p {
             margin: 0;
             font-size: 14px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -103,29 +108,6 @@
         <p>In the Binary Genesis universe, Earth decodes mysterious radio transmissions, crafting a blockchain simulating the Digital Matter Realm. Players dynamically decrypt binary sequences, contributing to the CryptoGenesis currency. Mining involves solving cryptographic puzzles, mirroring the cosmic conversation. Decentralized nodes ensure security, and the in-game economy utilizes CryptoGenesis for transactions and unique assets. Global participation and competition arise as players decode messages, revealing new chapters. The Void Cipher Syndicate establishes the CryptoGenesis movement, transforming decryption attempts into unique transactions. The simulated secret message, a celestial riddle, becomes a global phenomenon, attracting diverse participants. Binary Genesis seamlessly blends simulated blockchain mechanics and cosmic exploration, with the Void Cipher Syndicate and CryptoGenesis movement enriching the narrative—a captivating journey into the unknown realms of the cosmos.</p>
     </div>
 
-    <div class="section">
-        <h2>About Binary Genesis Gameplay</h2>
-        <p>Discover the immersive gameplay of Binary Genesis. Engage in dynamic binary decryption, mine CryptoGenesis currency, and participate in a global cosmic conversation. Uncover the secrets of the Digital Matter Realm and shape the narrative with the Void Cipher Syndicate.</p>
-    </div>
-
-    <div class="section">
-        <h2>NFT Marketplace</h2>
-        <p>Explore and trade unique assets inspired by the simulated Digital Matter Realm in the Binary Genesis NFT Marketplace. Acquire one-of-a-kind items tied to the cosmic code and enhance your in-game experience with exclusive digital collectibles.</p>
-        <a href="#nft-marketplace-link">Visit the NFT Marketplace</a>
-    </div>
-
-    <div class="section">
-        <h2>Whitepaper</h2>
-        <p>Read our detailed whitepaper to understand the intricacies of Binary Genesis and the cosmic code it unveils.</p>
-        <a href="#whitepaper-link">Read the Whitepaper</a>
-    </div>
-
-    <div class="section">
-        <h2>Roadmap</h2>
-        <p>Explore our roadmap to see the exciting milestones ahead in the Binary Genesis journey.</p>
-        <a href="#roadmap-link">View the Roadmap</a>
-    </div>
-
     <footer>
         <p>&copy; 2024 Binary Genesis. All rights reserved.</p>
     </footer>
@@ -140,8 +122,8 @@
 
         // Binary rain configuration
         var binaryRain = {
-            font_size: 12,
-            columns: c.width / 12,
+            font_size: 6,
+            columns: c.width / 6,
             drops: []
         };
 
@@ -151,7 +133,7 @@
 
         // Drawing the binary rain
         function drawBinaryRain() {
-            // Dark orange BG for the canvas
+            // Darker orange BG for the canvas
             // Translucent BG to show trail
             ctx.fillStyle = "rgba(128, 64, 0, 0.02)";
             ctx.fillRect(0, 0, c.width, c.height);
