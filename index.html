@@ -10,7 +10,7 @@
             background-color: #000;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* To prevent scrollbars due to canvas size */
+            overflow: hidden; /* To hide the default scrollbar */
         }
 
         header {
@@ -18,6 +18,8 @@
             color: #b8860b;
             text-align: center;
             padding: 20px;
+            position: relative;
+            z-index: 1; /* Ensure the header is above the canvas */
         }
 
         header h1 {
@@ -78,6 +80,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 1; /* Ensure the footer is above the canvas */
         }
 
         footer p {
@@ -131,8 +134,8 @@
         var c = document.getElementById("c");
         var ctx = c.getContext("2d");
 
-        // Making the canvas full screen
-        c.height = window.innerHeight;
+        // Making the canvas larger than the window height to enable scrolling
+        c.height = window.innerHeight * 2;
         c.width = window.innerWidth;
 
         // Binary rain configuration
