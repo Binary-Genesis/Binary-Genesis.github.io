@@ -10,6 +10,7 @@
             background-color: #000;
             margin: 0;
             padding: 0;
+            overflow: hidden; /* To prevent scrollbars due to canvas size */
         }
 
         header {
@@ -33,6 +34,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            z-index: -1; /* Move the canvas behind other elements */
         }
 
         .section {
@@ -42,6 +44,8 @@
             margin: 20px;
             padding: 30px;
             color: #b8860b;
+            position: relative;
+            z-index: 1; /* Ensure the content is above the canvas */
         }
 
         h2 {
