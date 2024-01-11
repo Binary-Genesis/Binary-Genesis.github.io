@@ -9,81 +9,20 @@
         /* Your existing CSS styles remain unchanged */
 
         .glitch {
+            color: #FF8C00; /* Dark orange text */
             display: inline-block;
-            position: relative;
         }
 
         .glitch::before {
             content: attr(data-text);
             position: absolute;
-            top: 2px;
+            top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            clip: rect(3px, 100px, 10px, 0);
-            background: #000;
-            animation: glitch 0.5s infinite linear alternate-reverse;
-        }
-
-        @keyframes glitch {
-            2%,
-            64% {
-                clip: rect(90px, 9999px, 30px, 0);
-            }
-
-            4%,
-            60% {
-                clip: rect(10px, 9999px, 110px, 0);
-            }
-
-            6%,
-            54% {
-                clip: rect(50px, 9999px, 40px, 0);
-            }
-
-            8%,
-            49% {
-                clip: rect(80px, 9999px, 5px, 0);
-            }
-
-            10%,
-            45% {
-                clip: rect(20px, 9999px, 60px, 0);
-            }
-
-            12%,
-            40% {
-                clip: rect(30px, 9999px, 70px, 0);
-            }
-
-            16%,
-            34% {
-                clip: rect(80px, 9999px, 80px, 0);
-            }
-
-            20%,
-            29% {
-                clip: rect(10px, 9999px, 120px, 0);
-            }
-
-            24%,
-            24% {
-                clip: rect(130px, 9999px, 60px, 0);
-            }
-
-            30%,
-            19% {
-                clip: rect(30px, 9999px, 90px, 0);
-            }
-
-            40%,
-            14% {
-                clip: rect(20px, 9999px, 30px, 0);
-            }
-
-            50% {
-                clip: rect(70px, 9999px, 110px, 0);
-            }
+            clip: rect(0, 100%, 0, 0);
+            visibility: hidden;
+            z-index: -1;
         }
     </style>
 </head>
@@ -106,7 +45,27 @@
     </footer>
 
     <script>
-        // Your existing JavaScript code for binary rain remains unchanged
+        function addGlitchEffect(element) {
+            var text = element.innerText;
+            var glitchedText = "";
+
+            for (var i = 0; i < text.length; i++) {
+                if (Math.random() < 0.1) { // Adjust probability as needed
+                    glitchedText += String.fromCharCode(Math.floor(Math.random() * 26) + 65); // Random uppercase letter
+                } else {
+                    glitchedText += text[i];
+                }
+            }
+
+            element.setAttribute('data-text', text);
+            element.innerHTML = glitchedText;
+        }
+
+        var glitchElements = document.querySelectorAll('.glitch');
+
+        glitchElements.forEach(function (element) {
+            addGlitchEffect(element);
+        });
     </script>
 </body>
 
