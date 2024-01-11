@@ -1,72 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binary Genesis - Game Overview</title>
+    <title>Binary Genesis - Explore the Cosmic Code</title>
     <style>
-        /* Your existing CSS styles remain unchanged */
-
-        .glitch {
-            color: #FF8C00; /* Dark orange text */
-            display: inline-block;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* To hide the default scrollbar */
         }
 
-        .glitch::before {
-            content: attr(data-text);
+        header {
+            background-color: rgba(255, 223, 102, 0.1);
+            color: #b8860b;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1; /* Ensure the header is above the canvas */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        canvas {
             position: absolute;
             top: 0;
             left: 0;
+            z-index: -1; /* Move the canvas behind other elements */
+        }
+
+        .section {
+            background-color: rgba(255, 223, 102, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 30px;
+            color: #b8860b;
+            position: relative;
+            z-index: 1; /* Ensure the content is above the canvas */
+        }
+
+        h2 {
+            color: #b8860b;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #ffd700;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: rgba(255, 223, 102, 0.1);
+            color: #ffd700;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            height: 100%;
-            clip: rect(0, 100%, 0, 0);
-            visibility: hidden;
-            z-index: -1;
+            z-index: 1; /* Ensure the footer is above the canvas */
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
         }
     </style>
 </head>
-
 <body>
 
     <header>
-        <!-- Your existing header content -->
+        <h1>Binary Genesis</h1>
+        <p>Explore the cosmic code and unravel the mysteries of the Digital Matter Realm.</p>
     </header>
 
     <canvas id="c"></canvas>
 
     <div class="section">
-        <h2 class="glitch" data-text="Game Overview">Game Overview</h2>
-        <p class="glitch" data-text="In the Binary Genesis universe, Earth decodes mysterious radio transmissions, crafting a blockchain simulating the Digital Matter Realm. Players dynamically decrypt binary sequences, contributing to the CryptoGenesis currency. Mining involves solving cryptographic puzzles, mirroring the cosmic conversation. Decentralized nodes ensure security, and the in-game economy utilizes CryptoGenesis for transactions and unique assets. Global participation and competition arise as players decode messages, revealing new chapters. The Void Cipher Syndicate establishes the CryptoGenesis movement, transforming decryption attempts into unique transactions. The simulated secret message, a celestial riddle, becomes a global phenomenon, attracting diverse participants. Binary Genesis seamlessly blends simulated blockchain mechanics and cosmic exploration, with the Void Cipher Syndicate and CryptoGenesis movement enriching the narrative—a captivating journey into the unknown realms of the cosmos.">In the Binary Genesis universe, Earth decodes mysterious radio transmissions, crafting a blockchain simulating the Digital Matter Realm. Players dynamically decrypt binary sequences, contributing to the CryptoGenesis currency. Mining involves solving cryptographic puzzles, mirroring the cosmic conversation. Decentralized nodes ensure security, and the in-game economy utilizes CryptoGenesis for transactions and unique assets. Global participation and competition arise as players decode messages, revealing new chapters. The Void Cipher Syndicate establishes the CryptoGenesis movement, transforming decryption attempts into unique transactions. The simulated secret message, a celestial riddle, becomes a global phenomenon, attracting diverse participants. Binary Genesis seamlessly blends simulated blockchain mechanics and cosmic exploration, with the Void Cipher Syndicate and CryptoGenesis movement enriching the narrative—a captivating journey into the unknown realms of the cosmos.</p>
+        <h2>Game Overview</h2>
+        <p>In the Binary Genesis universe, Earth decodes mysterious radio transmissions, crafting a blockchain simulating the Digital Matter Realm. Players dynamically decrypt binary sequences, contributing to the CryptoGenesis currency. Mining involves solving cryptographic puzzles, mirroring the cosmic conversation. Decentralized nodes ensure security, and the in-game economy utilizes CryptoGenesis for transactions and unique assets. Global participation and competition arise as players decode messages, revealing new chapters. The Void Cipher Syndicate establishes the CryptoGenesis movement, transforming decryption attempts into unique transactions. The simulated secret message, a celestial riddle, becomes a global phenomenon, attracting diverse participants. Binary Genesis seamlessly blends simulated blockchain mechanics and cosmic exploration, with the Void Cipher Syndicate and CryptoGenesis movement enriching the narrative—a captivating journey into the unknown realms of the cosmos.</p>
+    </div>
+
+    <div class="section">
+        <h2>About Binary Genesis Gameplay</h2>
+        <p>Discover the immersive gameplay of Binary Genesis. Engage in dynamic binary decryption, mine CryptoGenesis currency, and participate in a global cosmic conversation. Uncover the secrets of the Digital Matter Realm and shape the narrative with the Void Cipher Syndicate.</p>
+    </div>
+
+    <div class="section">
+        <h2>NFT Marketplace</h2>
+        <p>Explore and trade unique assets inspired by the simulated Digital Matter Realm in the Binary Genesis NFT Marketplace. Acquire one-of-a-kind items tied to the cosmic code and enhance your in-game experience with exclusive digital collectibles.</p>
+        <a href="#nft-marketplace-link">Visit the NFT Marketplace</a>
+    </div>
+
+    <div class="section">
+        <h2>Whitepaper</h2>
+        <p>Read our detailed whitepaper to understand the intricacies of Binary Genesis and the cosmic code it unveils.</p>
+        <a href="#whitepaper-link">Read the Whitepaper</a>
+    </div>
+
+    <div class="section">
+        <h2>Roadmap</h2>
+        <p>Explore our roadmap to see the exciting milestones ahead in the Binary Genesis journey.</p>
+        <a href="#roadmap-link">View the Roadmap</a>
     </div>
 
     <footer>
-        <!-- Your existing footer content -->
+        <p>&copy; 2024 Binary Genesis. All rights reserved.</p>
     </footer>
 
     <script>
-        function addGlitchEffect(element) {
-            var text = element.innerText;
-            var glitchedText = "";
+        var c = document.getElementById("c");
+        var ctx = c.getContext("2d");
 
-            for (var i = 0; i < text.length; i++) {
-                if (Math.random() < 0.1) { // Adjust probability as needed
-                    glitchedText += String.fromCharCode(Math.floor(Math.random() * 26) + 65); // Random uppercase letter
-                } else {
-                    glitchedText += text[i];
-                }
-            }
+        // Making the canvas larger than the window height to enable scrolling
+        c.height = window.innerHeight * 2;
+        c.width = window.innerWidth;
 
-            element.setAttribute('data-text', text);
-            element.innerHTML = glitchedText;
+        // Binary rain configuration
+        var binaryRain = {
+            font_size: 12,
+            columns: c.width / 12,
+            drops: []
+        };
+
+        for (var x = 0; x < binaryRain.columns; x++) {
+            binaryRain.drops[x] = 1;
         }
 
-        var glitchElements = document.querySelectorAll('.glitch');
+        // Drawing the binary rain
+        function drawBinaryRain() {
+            // Dark orange BG for the canvas
+            // Translucent BG to show trail
+            ctx.fillStyle = "rgba(128, 64, 0, 0.02)";
+            ctx.fillRect(0, 0, c.width, c.height);
 
-        glitchElements.forEach(function (element) {
-            addGlitchEffect(element);
-        });
+            ctx.fillStyle = "#FF8C00"; // Dark orange text
+            ctx.font = binaryRain.font_size + "px monospace";
+
+            // Looping over drops
+            for (var i = 0; i < binaryRain.drops.length; i++) {
+                // A random binary digit to print
+                var text = Math.floor(Math.random() * 2);
+                // x = i * font_size, y = value of drops[i] * font_size
+                ctx.fillText(text, i * binaryRain.font_size, binaryRain.drops[i] * binaryRain.font_size);
+
+                // Sending the drop back to the top randomly after it has crossed the screen
+                // Adding a randomness to the reset to make the drops scattered on the Y axis
+                if (binaryRain.drops[i] * binaryRain.font_size > c.height && Math.random() > 0.975) {
+                    binaryRain.drops[i] = 0;
+                }
+
+                // Incrementing Y coordinate
+                binaryRain.drops[i]++;
+            }
+        }
+
+        setInterval(drawBinaryRain, 33);
     </script>
 </body>
-
 </html>
