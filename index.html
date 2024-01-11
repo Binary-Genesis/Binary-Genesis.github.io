@@ -14,8 +14,8 @@
         }
 
         header {
-            background-color: rgba(255, 223, 102, 0.1);
-            color: #b8860b;
+            background-color: rgba(128, 64, 0, 0.5); /* Darker orange background */
+            color: #FF8C00; /* Dark orange text */
             text-align: center;
             padding: 20px;
             position: relative;
@@ -26,14 +26,12 @@
             margin: 0;
             font-size: 36px;
             font-weight: bold;
-            color: #333; /* Darkened color */
         }
 
         header p {
             margin-top: 10px;
             font-size: 18px;
             font-weight: bold;
-            color: #555; /* Darkened color */
         }
 
         canvas {
@@ -44,32 +42,32 @@
         }
 
         .section {
-            background-color: rgba(255, 223, 102, 0.1);
+            background-color: rgba(128, 64, 0, 0.5); /* Darker orange background */
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin: 20px;
             padding: 30px;
-            color: #b8860b;
+            color: #FF8C00; /* Dark orange text */
             position: relative;
             z-index: 1; /* Ensure the content is above the canvas */
         }
 
         h2 {
-            color: #b8860b;
+            color: #FF8C00; /* Dark orange text */
             font-size: 28px;
             margin-bottom: 20px;
             font-weight: bold;
         }
 
         p {
-            color: #ffd700;
+            color: #FF8C00; /* Dark orange text */
             font-size: 16px;
             line-height: 1.6;
             font-weight: bold;
         }
 
         a {
-            color: #ffd700;
+            color: #FF8C00; /* Dark orange text */
             text-decoration: none;
             font-weight: bold;
         }
@@ -79,8 +77,8 @@
         }
 
         footer {
-            background-color: rgba(255, 223, 102, 0.1);
-            color: #ffd700;
+            background-color: rgba(128, 64, 0, 0.5); /* Darker orange background */
+            color: #FF8C00; /* Dark orange text */
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -124,8 +122,8 @@
 
         // Binary rain configuration
         var binaryRain = {
-            font_size: 8,
-            columns: c.width / 8,
+            font_size: 6,
+            columns: c.width / 6,
             drops: []
         };
 
@@ -135,7 +133,7 @@
 
         // Drawing the binary rain
         function drawBinaryRain() {
-            // Dark orange BG for the canvas
+            // Darker orange BG for the canvas
             // Translucent BG to show trail
             ctx.fillStyle = "rgba(128, 64, 0, 0.02)";
             ctx.fillRect(0, 0, c.width, c.height);
